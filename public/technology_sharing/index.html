@@ -236,7 +236,7 @@ Python调用Matlab Python调库运行Java代码 以消息队列为媒介（框�
 以网络请求为媒介（网络层面、通过共同语言）：这个方法是最常见的了！比如我们自己写的普通BS和CS结构的程序就一直在用！我一说您可能就会明白。首先后端程序语言就很多样，其次前端程序语言也有很多选择！没看懂？那再换个说法，假如说后端用Java、前端用三件套（HTML&#43;CSS&#43;JS），是不是！不同编程语言合作了！这种合作是通过请求API实现的，后端暴露特定请求可访问的API，前端向这些API按约定的方式发起请求。现在比较火爆的分布式技术（简单说就是服务器之间可以相互发请求、实现协作、实现负载均衡，有时是直接发请求、有时是通过RPC实现）就是这个原理。分布式中的这种合作也是通过暴露API或者使用RPC（远程过程调用）的形式直接调用其他后端程序中的方法。这里举个例子，在我的这个开源文件管理项目中我是用到Python语言作为功能支撑（方便好写），Java语言作为核心支撑（稳定性强）。可以看到，我这里在Python后端使用FastApi提供Get请求接口，在Java后端使用SpringBoot-Web中提供的RestTemplate调用Python提供的，这样就实现了Python和Java之间的通信合作，并且如果我们使用网关的话，这种结构可以实现水平拓展性能的负载均衡。再举个其他冷门搭配的例子，在我另一个开源项目中，使Golang去调用硬件芯片上提供的API（用C编写的），这样就实现了Golang和硬件芯片之间的通信合作。
 分布式实现的文件管理项目中Java调用Python代码片段（main.py、FileAndFolderUtil.java） 绿植管理项目中Golang调用硬件上C提供的API代码片段（GreenBeltGoRun.go） 四、难点 五、看代码 控制台交互Python：查看 控制台交互Java：查看 通过文件交互Java：查看 通过文件交互Python：查看 通过文件交互用的文件：查看 Jpype：查看 测试Jpype用的Java代码：查看 测试Jpype用的Jar包：查看 测试Jpype用的Python代码：查看 分布式实现的文件管理项目：查看 分布式绿植管理项目：查看 六、总结 不同编程语言相互调用，其实是我们经常使用的开发模式。但是这种模式带来的便利往往被我们忽略掉。日常开发中经常会遇到通过这种方式可以便捷解决的需求，这种方式能够很有效的避免代码完全重构、跨语言扒库等等问题。 感谢您能耐心看完这篇文章，如果有什么问题，欢迎在评论区留言，我会尽快回复。 如果您觉得写的还不错，欢迎关注、点赞、分享、订阅、Star，您的点赞是我写作的动力。 </p>
   </div>
-  <footer class="entry-footer"><span title='2026-01-30 19:36:01 +0800 CST'>January 30, 2026</span>&nbsp;·&nbsp;<span>tyza66</span></footer>
+  <footer class="entry-footer"><span title='2023-08-14 19:36:01 +0800 CST'>August 14, 2023</span>&nbsp;·&nbsp;<span>tyza66</span></footer>
   <a class="entry-link" aria-label="post link to [技术分享][001期]不同编程语言之间如何通信合作！分布式只是其中一种情况！" href="http://localhost:1313/technology_sharing/t001/"></a>
 </article>
     </main>

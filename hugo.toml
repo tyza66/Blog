@@ -11,14 +11,37 @@ theme = 'PaperMod'
 
 # 你的栏目菜单
 [[menu.main]]
-  name = '技术分享'
-  url = '/technology_sharing/'
+  identifier = 'home'
+  name = '首页'
+  url = '/'
   weight = 10
+
 [[menu.main]]
-  name = '开源展示'
+  identifier = 'opensource'
+  name = '开源演示'
   url = '/open_source_demonstration/'
   weight = 20
+
 [[menu.main]]
+  identifier = 'codetalk'
   name = '码上杂谈'
   url = '/code_talk/'
   weight = 30
+
+[[menu.main]]
+  identifier = 'event'
+  name = '忆往特'
+  url = '/event/'
+  weight = 40
+
+[[menu.main]]
+  identifier = 'fantasy'
+  name = '范特西'
+  url = '/fantasy/'
+  weight = 50
+
+[[menu.main]]
+  identifier = 'about'
+  name = '关于'
+  url = '/about/'
+  weight = 60

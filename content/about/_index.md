@@ -39,10 +39,4 @@ title = '关于'
 - 饮料百科: [https://beverage.wiki/](https://beverage.wiki/)
 
 ## 鸣谢
-
-<div align="center">
-	[![mutantcat](https://s2.loli.net/2025/09/29/uUsonEaNBDcYFTp.png)](https://www.mutantcat.org/)
-	[![edgeone](https://s2.loli.net/2025/09/29/3Ww6U9TLrjefoHu.png)](https://edgeone.ai/)
-	[![naosi](https://s2.loli.net/2025/09/29/YTpziU8dOIWoj3u.png)](https://naosi.org/)
-	[![smms](https://s2.loli.net/2025/09/29/NTcoU7g2WLBrOfP.png)](https://sm.ms/)
-</div>
+<div align="center"> <a href="https://www.mutantcat.org/" target="_blank" rel="noopener"><img src="https://s2.loli.net/2025/09/29/uUsonEaNBDcYFTp.png" style="height:50px"/></a> <a href="https://edgeone.ai/" target="_blank" rel="noopener"><img src="https://s2.loli.net/2025/09/29/3Ww6U9TLrjefoHu.png" style="height:50px;margin-left:0px"/></a> <a href="https://naosi.org/" target="_blank" rel="noopener"><img src="https://s2.loli.net/2025/09/29/YTpziU8dOIWoj3u.png" style="height:50px;margin-left:15px"/></a> <a href="https://sm.ms/" target="_blank" rel="noopener"><img src="https://s2.loli.net/2025/09/29/NTcoU7g2WLBrOfP.png" style="height:30px;margin-left:10px"/></a> </div>

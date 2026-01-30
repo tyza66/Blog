@@ -170,7 +170,7 @@ uv init myproj # 生成
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;　　你可能从前在哪看到过这张表，确实在一些书记上有想通或相似的说法和列举，但是你可能会看的一头雾水，不知所云。不过当你理解了我上面说的几种基本解耦方式以后，只要抓住你这几条“元思维”，表里的任何招式都能瞬间归类：&lt;/p&gt;</description></item><item><title>[技术分享][001期]不同编程语言之间如何通信合作！分布式只是其中一种情况！</title><link>https://www.tyza66.top/technology_sharing/t001/</link><pubDate>Fri, 30 Jan 2026 19:36:01 +0800</pubDate><guid>https://www.tyza66.top/technology_sharing/t001/</guid><description>&lt;h3 id="一前言"&gt;一、前言&lt;/h3&gt;
+&lt;p&gt;　　你可能从前在哪看到过这张表，确实在一些书记上有想通或相似的说法和列举，但是你可能会看的一头雾水，不知所云。不过当你理解了我上面说的几种基本解耦方式以后，只要抓住你这几条“元思维”，表里的任何招式都能瞬间归类：&lt;/p&gt;</description></item><item><title>[技术分享][001期]不同编程语言之间如何通信合作！分布式只是其中一种情况！</title><link>https://www.tyza66.top/technology_sharing/t001/</link><pubDate>Mon, 14 Aug 2023 19:36:01 +0800</pubDate><guid>https://www.tyza66.top/technology_sharing/t001/</guid><description>&lt;h3 id="一前言"&gt;一、前言&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;我们学过C、Java、Python、Golang、Ruby&amp;hellip;等等高级语言，它们都有自己的优点、特性、语法。你是否想过诸如这样的问题：这些高级语言之间有什么关系、有什么共性、如何只发挥自身优势规避劣势、如何相互协调合作、如何互相通信呢？&lt;/li&gt;
 &lt;li&gt;本文主要讲述的是不同编程语言之间如何通信（同语言不同服务器间依然适用），从而渐渐解释上面提到的一系列问题。&lt;/li&gt;

@@ -1,19 +1,318 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Technology_sharing on tyza66的博客</title>
+    <title>技术分享 on tyza66的博客</title>
     <link>http://localhost:1313/technology_sharing/</link>
-    <description>Recent content in Technology_sharing on tyza66的博客</description>
+    <description>Recent content in 技术分享 on tyza66的博客</description>
     <generator>Hugo -- 0.155.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 30 Jan 2026 19:36:01 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 30 Jan 2026 19:36:04 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/technology_sharing/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>T001</title>
+      <title>[技术分享][004期]Web开发入门 - Python Flask教程</title>
+      <link>http://localhost:1313/technology_sharing/t004/</link>
+      <pubDate>Fri, 30 Jan 2026 19:36:04 +0800</pubDate>
+      <guid>http://localhost:1313/technology_sharing/t004/</guid>
+      <description>&lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
+&lt;p&gt;　　Web 开发几乎渗透了现代数字生活的&lt;strong&gt;所有层面&lt;/strong&gt;。从简单的信息展示到复杂的工业控制系统，只要是需要&lt;strong&gt;网络访问、跨设备、免安装&lt;/strong&gt;的场景，都是 Web 开发的领域。（新手如果还不知道是干啥的需要继续看一下，很快就能懂！）&lt;/p&gt;
+&lt;h3 id=&#34;从python的flask入手&#34;&gt;从Python的flask入手&lt;/h3&gt;
+&lt;p&gt;　　Flask 是 Python 语言下一种相对简单便捷的 Web 开发框架，相当适合入门 Web 开发（简单的操作中获得完整的理解）、敏捷测试接口开发（快速启动可用接口、快速实现开发）&lt;/p&gt;
+&lt;p&gt;　　我将使用这个简单的Web开发框架作为Web开发入门快速带你入门Web 开发领域，并且马上可以实现简单后端项目，立刻理解Web后端开发中的诸多术语和开发模式&lt;/p&gt;
+&lt;p&gt;　　在这些教程中我因为压缩时长的原因，很多东西的细节（可能被认为是废话）的部分会被选择性跳过，比如传输协议，网络端口啥的这些都暂且不提了，您可以持续关注我的频道来更全面的了解其他开发知识，这样做还有个好处！就是想不起来的时候可以直接搜一下独立的知识点，快速解决遗忘问题&lt;/p&gt;
+&lt;h3 id=&#34;术语&#34;&gt;术语&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Web API：网站的后台接口。API 通常返回JSON形式的数据（返回形式多种多样，包括 html 页面）。&lt;/li&gt;
+&lt;li&gt;路由：URL 和处理函数的&amp;quot;接线员&amp;quot;。比如把 &lt;code&gt;/user/123&lt;/code&gt; 这个地址接到 &lt;code&gt;get_user()&lt;/code&gt; 函数上，用户访问这个链接就执行对应代码&lt;/li&gt;
+&lt;li&gt;请求头：请求头是类HTTP请求中附加在主体内容之前的元数据区域，&lt;/li&gt;
+&lt;li&gt;Restful API：一种设计规范。用不同的 HTTP 方法表示不同操作：&lt;code&gt;GET&lt;/code&gt; 获取、&lt;code&gt;POST&lt;/code&gt; 创建、&lt;code&gt;PUT&lt;/code&gt; 修改、&lt;code&gt;DELETE&lt;/code&gt; 删除等（按语义区分），类似对资源的增删改查&lt;/li&gt;
+&lt;li&gt;视图：Flask 里处理请求的函数。接收浏览器发来的数据，处理业务逻辑，最后返回结果（可以是文字、JSON 或网页）。&lt;/li&gt;
+&lt;li&gt;上下文：Flask 给每个请求创建的&amp;quot;临时工作台&amp;quot;。上面放着当前请求的数据（比如用户登录信息、表单参数），你在视图函数里随时能取出来用。&lt;/li&gt;
+&lt;li&gt;模板：带占位符的 HTML 文件（如 &lt;code&gt;hello {{ name }}&lt;/code&gt;）。视图函数把数据填进模板，生成最终网页发给浏览器，实现前端展示和后端逻辑的分离。&lt;/li&gt;
+&lt;li&gt;JSON：一种常见的文本数据格式（像 Python 字典的字符串版）。&lt;code&gt;{&amp;quot;name&amp;quot;: &amp;quot;张三&amp;quot;, &amp;quot;age&amp;quot;: 20}&lt;/code&gt;，前后端通信用它交换数据，Flask 用 &lt;code&gt;jsonify()&lt;/code&gt; 直接可以返回。&lt;/li&gt;
+&lt;li&gt;前后端分离：这个词其实本身有很多渊源（但这里秉着减少废话的原则），但是现在你可以理解前端和后端”不同源、分离“就是他俩运行在两个不同的程序中，这种情况下通常为了安全而需要进行跨越配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;要素&#34;&gt;要素&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;返回结果：准确来说可以是任何允许的形式，而不仅是返回 JSON、网页等这种数据&lt;/li&gt;
+&lt;li&gt;接收请求参数：请求发起方会携带一些各种形式的参数（query、请求体、表单&amp;hellip;）&lt;/li&gt;
+&lt;li&gt;模板：页面中嵌入一些专门准备被替换的标签&lt;/li&gt;
+&lt;li&gt;跨域问题：前后端服务非同源的时候，跨服务的请求会触发跨域安全机制，需要配置一下来允许请求&lt;/li&gt;
+&lt;li&gt;数据库操作：使用ORM框架（这里选&lt;strong&gt;SQLAlchemy&lt;/strong&gt;）连接数据库并实现增删改查&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;相关资料&#34;&gt;相关资料&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/pallets/flask&#34;&gt;https://github.com/pallets/flask&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://flask.palletsprojects.com/en/stable/&#34;&gt;https://flask.palletsprojects.com/en/stable/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/tyza66/PythonWebStart-Flask&#34;&gt;本次讲解代码&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/tyza66/JavaAndPythonWebTeaching&#34;&gt;本人2022年讲解版本&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;《Flask Web 开发》（狗书）-【美】Miguel Grinberg&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>[技术分享][003期]Python虚拟环境这样用(UV)</title>
+      <link>http://localhost:1313/technology_sharing/t003/</link>
+      <pubDate>Fri, 30 Jan 2026 19:36:03 +0800</pubDate>
+      <guid>http://localhost:1313/technology_sharing/t003/</guid>
+      <description>&lt;h3 id=&#34;视频教程&#34;&gt;视频教程&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://v.douyin.com/bHdcmkaVSFI/&#34;&gt;https://v.douyin.com/bHdcmkaVSFI/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;问题导向&#34;&gt;问题导向&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;很多的 Python 依赖（轮子）版本是相耦合的，但是系统总体的 Python 环境是唯一的，如果想运行不同依赖版本下的项目代码，就需要重复性的卸载和删除这些库&lt;/li&gt;
+&lt;li&gt;有时候单纯的想试一下某个轮子，但是还担心安装之后卸载不干净&lt;/li&gt;
+&lt;li&gt;一些 Python 环境是不带包管理器 pip 的，例如单纯的 cPython&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;解决方案&#34;&gt;解决方案&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;针对依赖关系，使用虚拟环境&lt;/li&gt;
+&lt;li&gt;针对没有 pip 的情况，使用 Python 环境变量，或者自己补个 pip&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;conda是这样&#34;&gt;Conda是这样&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;创建完全隔离的运行环境，还能装 C/C++、R、CUDA、MKL、FFmpeg 等非 Python 二进制&lt;/li&gt;
+&lt;li&gt;安装前先计算整体依赖闭包，发现冲突会拒绝执行&lt;/li&gt;
+&lt;li&gt;体积大、启动慢，但是&lt;strong&gt;完全独立&lt;/strong&gt;，就是不要求 conda 环境外部的系统环境有 Python&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;conda create -n env&lt;/code&gt;、&lt;code&gt;conda install xxx&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;uv-能做到&#34;&gt;UV 能做到&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;快速创建虚拟环境，管理依赖&lt;/li&gt;
+&lt;li&gt;直接补 pip，在虚拟环境随便用&lt;/li&gt;
+&lt;li&gt;轻量、块，安装轻量、用起来快&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;uv有哪些操作&#34;&gt;UV有哪些操作&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;uv venv&lt;/code&gt; 创建虚拟环境，可以直接在虚拟环境下使用传统的requirements文件和基本的 pip 操作直接用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;uv init myproj&lt;/code&gt; 创建标准的 uv 项目骨架&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  UV 基本项目骨架  
+  uv init myproj               # 生成
+  # myproj/
+  # ├── .python-version        (可选，pin 3.11 等)
+  # ├── pyproject.toml         项目元数据+依赖
+  # ├── README.md
+  # ├── .gitignore
+  # └── src/
+  #     └── myproj/
+  #         └── __init__.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;uv add xxx&lt;/code&gt; 在UV项目中添加依赖&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[技术分享][002期]通过“隔离”和“原子化”来灵活实现“低耦合”</title>
+      <link>http://localhost:1313/technology_sharing/t002/</link>
+      <pubDate>Fri, 30 Jan 2026 19:36:02 +0800</pubDate>
+      <guid>http://localhost:1313/technology_sharing/t002/</guid>
+      <description>&lt;p&gt;　　之前的一篇文章中，我们探讨了不同编程语言之间的交互方式，当然那篇技术分享文章已经是三年前的了。最近接触了更多关于这方面的东西，就比如Docker和Containerd之间交互所用到的Unix Socket、RPC其实可以有更多巧妙应用，甚至作为用户界面。当然这次跟这个也是有关系的，本期的文章我主要想探讨的问题是所谓评判程序优秀程度时朗朗上口的两个指标“高内聚低耦合”，这是一个软件工程学中的概念，“内聚性”使得模块更加独立，“低耦合”使得模块之间的关系减弱。通常我们使用编程语言的一些特性还有巧妙的设计模式增强内聚、降低耦合。从而使得代码易于维护和重用，但这并不是强制的。这期我要说一些思路，但并不是所谓银弹，也就是说这个方案并不是一个万能钥匙，不过追求易于维护和职责分离的时候走投无路了，可以试一试我说的这些方案。&lt;/p&gt;
+&lt;p&gt;　　首先我说一个背景，假如说一个操作系统没有内置进程管理器，我们要做一个进程管理器，职责就是管理系统进程（类似systemd）。首先我们就会想到参考systemd对吧，先不说他的CLI 界面，就是这个模式来说，systemctl本身功能就是管理进程相关的，这个不会受外界影响，那它管理的进程功能应用呢？细想一下，是不是systemd 对业务进程是一种“一厢情愿”的超低耦合！那加入我们自己想做一个进程管理器，你会怎么做，难道直接将运行的业务内置进进程管理器？不过也不是不可以，看这个业务架构需要的细分程度，不过我们当然还是追求一定的通用性。现在我们讨论一种架构较为庞大，且各部分需要复用或可能需要复用，并且不同层次的服务都可能被直接或间接调用。&lt;/p&gt;
+&lt;p&gt;　　再来看systemd的CLI，就是我们常用的systemctl命令，它跟systemd之间呢？容易发现systemctl 与 systemd 之间是“进程隔离 + 文本协议（D-Bus）”的松耦合，就像Docker跟Containerd之间是用Unix Socket发送grpc消息一样。他们的共性就是-“进程隔离”，而根据我之前的文章，进程之间是有很多通信方式的，甚至可以跨设备、跨编程语言、跨服务。所以说在这个“颗粒度”的“隔离”是可行的，并且有效的增强高内聚低耦合的手段。&lt;/p&gt;
+&lt;p&gt;　　我认为低耦合的技巧在于“隔离”，恰当的软件隔离还是硬件隔离都可以实现一定程度的解耦合，得益于硬件接口和软件消息的多样性、可转换、规范性，我们可以非常方便的让各个部分各司其职，实现低耦合和复用。硬件层面，比如我有多台服务器，每一台对应着不同的服务，就像现在有的洗衣机专门分出来一个洗衣桶专门洗内衣、专门洗袜子。软件方面，进程隔离、类隔离、线程隔离都是非常常见的。但其实还有一种方式，电热毯是用来暖被窝的，热水壶就是用来烧水的，但是根本上都是电热原理，电热原理跟这里两种使用方法之间也是松耦合，这是一种原理与用途的解耦，这种机制把底层通用原理/机制与上层具体应用/场景分离开来，让同一个原理可以灵活地适配多种用途，而不被某一用途“绑死”。这第三种方式也揭示了一种新的思维，暂且我把“底层机制+中间抽象”称为“原子能力”，而原子能力可以支撑的叫“上层应用”，就像我刚才说的“电热原理”就是一种“原子能力”，“电热毯”和“热水壶”就是“上层应用”。&lt;/p&gt;
+&lt;p&gt;　　上面， 我对“原子能力”的定义中包含了“中间抽象”，其实“原子能力”本身也是可以分层整合成新的“原子能力”，这个衍生能力也很重要，这个一会说。我继续补充一个说法，这是一个一句话的设计原则，“不要让你的底层机制知道它在做什么业务”。如果我们要做的是实践，它是一种知识的整合体加上层封装，而这些理论知识必须对应来自几本书籍的话，这些书籍就是所谓“原子能力”，那么如果有一个图书馆呢？图书馆不是“书的堆积”，而是“知识的操作系统”。原子能力本身可以分层、整合、衍生出新的“原子能力”。&lt;/p&gt;
+&lt;p&gt;　　前提知识引入好了！现在你已经了解了软件和硬件“隔离解耦“和我的第三方法“机制与策略分离解耦”，现在你可以看这张表了。&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;维度&lt;/th&gt;
+          &lt;th&gt;实现抓手（举例）&lt;/th&gt;
+          &lt;th&gt;一句话记忆&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1. 空间隔离&lt;/td&gt;
+          &lt;td&gt;进程、容器、VM、沙箱、不同微服务、不同机柜、不同芯片&lt;/td&gt;
+          &lt;td&gt;不在同一地址空间，就别想直接牵手。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;2. 时间隔离&lt;/td&gt;
+          &lt;td&gt;消息队列、事件溯源、CQRS、批处理窗口、断点续传&lt;/td&gt;
+          &lt;td&gt;错开时间，自然不见面。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;3. 协议/格式解耦&lt;/td&gt;
+          &lt;td&gt;统一 IDL（Protobuf/Avro）、自描述消息（CloudEvents）、转码网关&lt;/td&gt;
+          &lt;td&gt;语言不通，带个翻译。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;4. 语义层解耦&lt;/td&gt;
+          &lt;td&gt;原子能力图书馆、机制-策略分离、DSL→引擎→执行&lt;/td&gt;
+          &lt;td&gt;只给说明书，不给故事书。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;5. 依赖方向反转&lt;/td&gt;
+          &lt;td&gt;DIP + IoC/DI、OSGi/Jigsaw SPI、插件化、Spring Factories&lt;/td&gt;
+          &lt;td&gt;别来找我，我去找你。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;6. 数据访问解耦&lt;/td&gt;
+          &lt;td&gt;读写分离、事件存储 + 投影、数据虚拟化、Polyglot DB&lt;/td&gt;
+          &lt;td&gt;数据长在一起，用法各自开花。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;7. 版本解耦&lt;/td&gt;
+          &lt;td&gt;并行版本、灰度路由、Feature Flag、Sidecar 代理兼容老协议&lt;/td&gt;
+          &lt;td&gt;新老同堂，各走各门。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;8. 组织解耦&lt;/td&gt;
+          &lt;td&gt;康威逆运用：用架构反向约束团队边界、平台 + 业务双速团队&lt;/td&gt;
+          &lt;td&gt;代码怎么拆，团队就怎么坐。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;9. 治理解耦&lt;/td&gt;
+          &lt;td&gt;服务网格（ traffic / policy / security 三军分立）、策略引擎 OPA&lt;/td&gt;
+          &lt;td&gt;流量、安全、观察，三权分立。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;10. 资源解耦&lt;/td&gt;
+          &lt;td&gt;Serverless/BaaS、弹性池、GPU/FPGA 资源抽象、统一调度层&lt;/td&gt;
+          &lt;td&gt;谁用谁拿，用完即还。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;11. 失败/重试解耦&lt;/td&gt;
+          &lt;td&gt;断路器、舱壁、异步重试队列、幂等键、Saga 补偿&lt;/td&gt;
+          &lt;td&gt;出错别连环，炸不到邻居。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;12. 性能解耦&lt;/td&gt;
+          &lt;td&gt;背压流控、批量聚合、缓存分层、CDN 边缘卸载&lt;/td&gt;
+          &lt;td&gt;快慢分流，别让慢拖死快。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;13. 安全解耦&lt;/td&gt;
+          &lt;td&gt;零信任网络、mTLS 即服务、身份与业务逻辑分层（SPIFFE ID）&lt;/td&gt;
+          &lt;td&gt;先验身份，再谈业务。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;14. 硬件解耦&lt;/td&gt;
+          &lt;td&gt;总线标准（PCIe）、即插即用固件、SerDes 通道抽象、Chiplet&lt;/td&gt;
+          &lt;td&gt;管脚对齐，内部随便换。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;15. 生命周期解耦&lt;/td&gt;
+          &lt;td&gt;GitOps + 不可变基础设施、蓝绿/金丝雀发布、回滚与数据迁移脚本分离&lt;/td&gt;
+          &lt;td&gt;生归生，死归死，生死不互卡。&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;　　你可能从前在哪看到过这张表，确实在一些书记上有想通或相似的说法和列举，但是你可能会看的一头雾水，不知所云。不过当你理解了我上面说的几种基本解耦方式以后，只要抓住你这几条“元思维”，表里的任何招式都能瞬间归类：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[技术分享][001期]不同编程语言之间如何通信合作！分布式只是其中一种情况！</title>
       <link>http://localhost:1313/technology_sharing/t001/</link>
       <pubDate>Fri, 30 Jan 2026 19:36:01 +0800</pubDate>
       <guid>http://localhost:1313/technology_sharing/t001/</guid>
-      <description></description>
+      <description>&lt;h3 id=&#34;一前言&#34;&gt;一、前言&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;我们学过C、Java、Python、Golang、Ruby&amp;hellip;等等高级语言，它们都有自己的优点、特性、语法。你是否想过诸如这样的问题：这些高级语言之间有什么关系、有什么共性、如何只发挥自身优势规避劣势、如何相互协调合作、如何互相通信呢？&lt;/li&gt;
+&lt;li&gt;本文主要讲述的是不同编程语言之间如何通信（同语言不同服务器间依然适用），从而渐渐解释上面提到的一系列问题。&lt;/li&gt;
+&lt;li&gt;有的同学看到这里可能就要翻走了，觉得这篇文章要说的这个东西不就是分布式吗，这东西咱早会了，玩的肯定比你溜&amp;hellip;但是！我要说并不只是分布式，而是本质上的东西，分布式只是其中的一种实现方式，还请您看我细细道来。&lt;/li&gt;
+&lt;li&gt;其实我们在日常使用计算机的过程中，非常常见的，就已经在使用不同编程语言相互协调合作相互通信的机制了，举几个最直观的例子：Docker是使用Go语言编写的，但是我们在Docker容器中可以使用Python、Ruby、Java等语言编写的程序、Java编译器最初是使用C语言编写的、Java虚拟机HotSpot是用C++语言编写的、消息队列支持不同编程语言之间通信、项目中不同服务之间相互请求&amp;hellip;&lt;/li&gt;
+&lt;li&gt;这样做的好处显而易见：方便开发、方便跨平台、方便分配性能&amp;hellip;&lt;/li&gt;
+&lt;li&gt;咋回事呢？我这里提出两个四字词语作为关键词：协调合作、共同语言&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;二思路&#34;&gt;二、思路&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;日常生活中，我们人类之间的交流方式多种多样，语言、肢体语言、书面文字、手机发消息、视频通话&amp;hellip;这些都是我们人类之间的通信方式，但是我们并不是每一种通信方式都会使用，而是根据场景、目的、效率等因素来选择合适的通信方式。&lt;/li&gt;
+&lt;li&gt;这些交流方式要分类的话，可以通过层面进行分类为：书面、口头、视觉、电子介质&amp;hellip;。同理，在计算机程序上，也有很多的交互层面，比如：内存层面、变量作用域层面、网络层面、文件层面、进程层面、线程层面、硬件层面&amp;hellip;。我们可以通过这些层面来进行分类和组合，然后再根据场景、目的、效率等因素来选择合适的通信合作方式。&lt;/li&gt;
+&lt;li&gt;在同一个层面下，不同的编程语言或不同的程序之间的协作要么依靠协调合作，要么依靠共同语言。说白了就是约定好合作方式，然后按照约定的方式进行合作。协调合作比如多个程序之间处理各自部分（各系统之间可以没有请求关系）使得最终的结果是预期的结果。共同语言比如：Java程序和Python程序之间的通信，可以通过约定好的文件格式、网络协议、内存格式、序列化方式等方式进行通信。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;三实现例子&#34;&gt;三、实现例子&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;以人肉为媒介（客观世界层面、通过协调合作和共同语言）：顾名思义，直接让人用眼睛看，再录入！这个方法虽然正常人都能想到，但是我还是要写一下！人能做的事情其实随着技术发展，机器将来也可以做！因此可以联想到：OCR、自动化脚本、AI&amp;hellip;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img alt=&#34;11.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/Zv2il6Pgb8XWTGL.png&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;以系统控制台为媒介（操作系统层面、通过共同语言交互）：如果您平时使用的操作系统是Windows，其实很容易想到，只要拿到一个命令行窗口，就可以对电脑做几乎任何操作，包括应用程序的启动、关闭、文件的读写、网络的请求等等。那么编程语言可以拿到命令行吗？答案是肯定的。并且只要编程语言可以调用操作系统的API（大多数编程语言都支持），拿到命令行，然后就可以对电脑做任何操作了。借助这一特性，我们可以在不同编程语言之间进行通信合作，比如：Python调用操作系统API拿到命令行，然后执行Java程序，Java程序执行完毕后，将结果返回给Python程序，Python程序再将结果返回给用户。这样就实现了Python和Java之间的通信合作。反之亦然。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Java代码
+&lt;img alt=&#34;2.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/fcDTgd3IZUA2uVa.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Python代码
+&lt;img alt=&#34;3.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/PDYHs9MhU4RXcNx.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;运行结果
+&lt;img alt=&#34;4.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/McE6aALu91OTQNW.png&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;以文件系统为媒介（文件层面、通过共同语言交互）：一般我们常见的操作系统都具有文件管理的功能。恰巧的是，高级语言中一般也都有编辑文件使用的库，我们可以直接通过编程语言对系统中的文件和文件夹进行读写操作，并且文件的内容（就是不同编程语言之间交互用到的共同语言）由我们开发者来自己规定。这里我举一个小例子，首先我们在系统上有一个公共可以访问的文本文档，在Java程序中我们封装了一个工具类专门用来读写文本文件的最后几行（要执行的命令），Python之中我们也是通过调用文件操作来实现文件读写。并且我们规定文件的每一行都是一条指令，使用&lt;code&gt;,&lt;/code&gt;分割当条指令的各部分，并且我将每一条指令分为三部分，第一部分是指令，第二部分是参数（如果是多参数就可以用特定符号分割，如果各部分之间的分隔符与参数冲突可以通过固定指令和是否被执行完参数的长度来控制），第三部分是指令是否被执行完（也就是说，用户可以同时发布多条指令）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Java代码
+&lt;img alt=&#34;5.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/Sg2lcQ1eXW9CNiK.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Python代码
+&lt;img alt=&#34;6.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/LJ6oxBh2mPd4uWS.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;执行效果
+&lt;img alt=&#34;7.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/xdo7iwMlv82mqTB.png&#34;&gt;
+&lt;img alt=&#34;8.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/nDL23NfWlXioFVG.png&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;以时间分片为媒介（客观世界层面、通过协调合作交互）：时间分片这个事情其实并不用多说什么，理解起来也容易。我们常将时间比作一条线，叫做时间线，这种方式的介绍也由此展开介绍。在时间线上发生的事件有这几种关系：交替、并行、半交替半并行等，总之就是可以一起执行，可以分开执行。一起执行的话（后两种）想要在各个服务程序中想要通信，这种方法只适用于部分场景（取决于选择的长期纯粹介质），这条例子中主要说的是交替执行。按时间分片交替执行其实是我们最直观的相同编程语言、不编程语言之间交互的方式，这种方式的精髓在于一个程序执行完成之后，必然会通过长期存储介质将信息保存（可以是纸带、文件、二进制流、图片等），之后下一个时间片中的程序再去约定好的地方将上一个程序传递过来的信息读取解析，然后再根据信息执行自己的任务，之后再通过长期存储介质将自己想传递出去的信息传递回去&amp;hellip;我们常见的使用这种方式的地方就是在网关分布式程序（就是通过网关实现一系列执行同样业务的服务器的负载均衡等操作）中使用到的Redis共享Session，在这种模式下就属于以时间片为媒介的同种高级语言（可以不同种）交替执行。在同一个时间线上，一个请求打到网关上的时候，会经过负载均衡机制将请求分给网关下面的单台服务器，这些服务器因为是使用的共享的数据源，所以用户端看起来就是一台服务器（不会出现数据偏差）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img alt=&#34;9.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/LJ7corPKMktxzle.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img alt=&#34;10.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/5AI6zNio37ep2ym.png&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;以语言中间件（工具库）为媒介（框架层面、通过共同语言）：其实很多编程语言都有直接调用其他编程语言代码的库（这些库的底层原理可能是走的其他交互方式，但是我在这个层面介绍这些），比如Matlab能调用Python代码、Python也能调用Matlab的代码调用的分别都是自身语言下的库或和其他语言功能、比如在Python中使用Jpype调用Java程序&amp;hellip;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python调用Matlab
+&lt;img alt=&#34;12.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/dF41e2jbEpnuNUB.jpg&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Python调库运行Java代码
+&lt;img alt=&#34;13.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/62PWJH4OkBzUuxg.png&#34;&gt;
+&lt;img alt=&#34;14.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/QwiD2cYa8XCNLq9.png&#34;&gt;
+&lt;img alt=&#34;15.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/dENQrq6lpni8Wg3.png&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;以消息队列为媒介（框架层面、通过共同语言）：不管消息队列是现成的还是自己实现的，不管它有多少高级又神奇的功能，本质上，能实现通信合作的原因就是这一个！传递的是字符串！一般使用消息中间件的情况下，消息是先从程序发送到消息队列中间件，之后经过消息队列中间件（可以有逻辑或规则）被其他程序（可以是相同语言或不同语言实现的）调库获得消息信息并处理。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img alt=&#34;16.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/ZSzxbrwts928EWh.png&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;以网络请求为媒介（网络层面、通过共同语言）：这个方法是最常见的了！比如我们自己写的普通BS和CS结构的程序就一直在用！我一说您可能就会明白。首先后端程序语言就很多样，其次前端程序语言也有很多选择！没看懂？那再换个说法，假如说后端用Java、前端用三件套（HTML+CSS+JS），是不是！不同编程语言合作了！这种合作是通过请求API实现的，后端暴露特定请求可访问的API，前端向这些API按约定的方式发起请求。现在比较火爆的分布式技术（简单说就是服务器之间可以相互发请求、实现协作、实现负载均衡，有时是直接发请求、有时是通过RPC实现）就是这个原理。分布式中的这种合作也是通过暴露API或者使用RPC（远程过程调用）的形式直接调用其他后端程序中的方法。这里举个例子，在我的这个开源文件管理项目中我是用到Python语言作为功能支撑（方便好写），Java语言作为核心支撑（稳定性强）。可以看到，我这里在Python后端使用FastApi提供Get请求接口，在Java后端使用SpringBoot-Web中提供的RestTemplate调用Python提供的，这样就实现了Python和Java之间的通信合作，并且如果我们使用网关的话，这种结构可以实现水平拓展性能的负载均衡。再举个其他冷门搭配的例子，在我另一个开源项目中，使Golang去调用硬件芯片上提供的API（用C编写的），这样就实现了Golang和硬件芯片之间的通信合作。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分布式实现的文件管理项目中Java调用Python代码片段（main.py、FileAndFolderUtil.java）
+&lt;img alt=&#34;18.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/bXeAPz3nTrNHmju.png&#34;&gt;
+&lt;img alt=&#34;17.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/SlevFhPAB9Ydqig.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;绿植管理项目中Golang调用硬件上C提供的API代码片段（GreenBeltGoRun.go）
+&lt;img alt=&#34;21.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/6Ui5P2RKHw3nFGx.png&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;四难点&#34;&gt;四、难点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img alt=&#34;1.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/evftYrH8q2Xk6gS.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img alt=&#34;19.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/k1cxfYrevgslbIR.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img alt=&#34;20.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/02/15/NaFVihRo3L6XAJs.png&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;五看代码&#34;&gt;五、看代码&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;控制台交互Python：&lt;a href=&#34;https://github.com/tyza66/RandomMeasurement/blob/main/Python/ControlCommandLine.py&#34;&gt;查看&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;控制台交互Java：&lt;a href=&#34;https://github.com/tyza66/RandomMeasurement/blob/main/Python/SimpleAddition.java&#34;&gt;查看&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;通过文件交互Java：&lt;a href=&#34;https://github.com/tyza66/RandomMeasurement/blob/main/Java/src/main/java/org/example/CollaborateThroughDocuments.java&#34;&gt;查看&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;通过文件交互Python：&lt;a href=&#34;https://github.com/tyza66/RandomMeasurement/blob/main/Python/CollaborateThroughFileOperations.py&#34;&gt;查看&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;通过文件交互用的文件：&lt;a href=&#34;https://github.com/tyza66/RandomMeasurement/blob/main/Java/src/main/java/org/example/testTranslate.txt&#34;&gt;查看&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Jpype：&lt;a href=&#34;https://jpype.readthedocs.io/en/latest/&#34;&gt;查看&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;测试Jpype用的Java代码：&lt;a href=&#34;https://github.com/tyza66/RandomMeasurement/blob/main/Java/src/main/java/org/example/Jtest.java&#34;&gt;查看&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;测试Jpype用的Jar包：&lt;a href=&#34;https://github.com/tyza66/RandomMeasurement/tree/main/Java/jar/Jtest&#34;&gt;查看&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;测试Jpype用的Python代码：&lt;a href=&#34;https://github.com/tyza66/RandomMeasurement/blob/main/Python/RunningJavaByJpype.py&#34;&gt;查看&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;分布式实现的文件管理项目：&lt;a href=&#34;https://github.com/tyza66/VA-File&#34;&gt;查看&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;分布式绿植管理项目：&lt;a href=&#34;https://github.com/tyza66/GreenBelt&#34;&gt;查看&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;六总结&#34;&gt;六、总结&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;不同编程语言相互调用，其实是我们经常使用的开发模式。但是这种模式带来的便利往往被我们忽略掉。日常开发中经常会遇到通过这种方式可以便捷解决的需求，这种方式能够很有效的避免代码完全重构、跨语言扒库等等问题。&lt;/li&gt;
+&lt;li&gt;感谢您能耐心看完这篇文章，如果有什么问题，欢迎在评论区留言，我会尽快回复。&lt;/li&gt;
+&lt;li&gt;如果您觉得写的还不错，欢迎关注、点赞、分享、订阅、Star，您的点赞是我写作的动力。&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>

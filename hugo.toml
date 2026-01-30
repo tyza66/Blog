@@ -5,11 +5,15 @@ theme = 'PaperMod'
 
 [params]
   author = 'tyza66'
-  ShowReadingTime = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
 
-# 你的栏目菜单
+[params.profileMode]
+  enabled = true
+  title = "tyza66的博客"
+  subtitle = "技术分享、日常思考"
+  imageUrl = "https://github.com/tyza66.png"
+  imageWidth = 120
+  imageHeight = 120
+
 [[menu.main]]
   identifier = 'home'
   name = '首页'
@@ -17,31 +21,36 @@ theme = 'PaperMod'
   weight = 10
 
 [[menu.main]]
+  name = '技术分享'
+  url = '/technology_sharing/'
+  weight = 20
+
+[[menu.main]]
   identifier = 'opensource'
   name = '开源演示'
   url = '/open_source_demonstration/'
-  weight = 20
+  weight = 30
 
 [[menu.main]]
   identifier = 'codetalk'
   name = '码上杂谈'
   url = '/code_talk/'
-  weight = 30
+  weight = 40
 
 [[menu.main]]
   identifier = 'event'
   name = '忆往特'
   url = '/event/'
-  weight = 40
+  weight = 50
 
 [[menu.main]]
   identifier = 'fantasy'
   name = '范特西'
   url = '/fantasy/'
-  weight = 50
+  weight = 60
 
 [[menu.main]]
   identifier = 'about'
   name = '关于'
   url = '/about/'
-  weight = 60
+  weight = 70

@@ -1,0 +1,24 @@
+baseURL = 'https://tyza66.github.io'
+languageCode = 'zh-cn'
+title = 'tyza66的博客'
+theme = 'PaperMod'
+
+[params]
+  author = 'tyza66'
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+
+# 你的栏目菜单
+[[menu.main]]
+  name = '技术分享'
+  url = '/technology_sharing/'
+  weight = 10
+[[menu.main]]
+  name = '开源展示'
+  url = '/open_source_demonstration/'
+  weight = 20
+[[menu.main]]
+  name = '码上杂谈'
+  url = '/code_talk/'
+  weight = 30

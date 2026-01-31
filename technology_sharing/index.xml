@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>技术分享 on tyza66的博客</title><link>https://www.tyza66.top/technology_sharing/</link><description>Recent content in 技术分享 on tyza66的博客</description><generator>Hugo -- 0.155.0</generator><language>zh-cn</language><lastBuildDate>Fri, 30 Jan 2026 19:36:04 +0800</lastBuildDate><atom:link href="https://www.tyza66.top/technology_sharing/index.xml" rel="self" type="application/rss+xml"/><item><title>[技术分享][004期]Web开发入门 - Python Flask教程</title><link>https://www.tyza66.top/technology_sharing/t004/</link><pubDate>Fri, 30 Jan 2026 19:36:04 +0800</pubDate><guid>https://www.tyza66.top/technology_sharing/t004/</guid><description>&lt;h3 id="说明"&gt;说明&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>技术分享 on tyza66的博客</title><link>https://www.tyza66.top/technology_sharing/</link><description>Recent content in 技术分享 on tyza66的博客</description><generator>Hugo -- 0.155.1</generator><language>zh-cn</language><lastBuildDate>Fri, 30 Jan 2026 19:36:04 +0800</lastBuildDate><atom:link href="https://www.tyza66.top/technology_sharing/index.xml" rel="self" type="application/rss+xml"/><item><title>[技术分享][004期]Web开发入门 - Python Flask教程</title><link>https://www.tyza66.top/technology_sharing/t004/</link><pubDate>Fri, 30 Jan 2026 19:36:04 +0800</pubDate><guid>https://www.tyza66.top/technology_sharing/t004/</guid><description>&lt;h3 id="说明"&gt;说明&lt;/h3&gt;
 &lt;p&gt;　　Web 开发几乎渗透了现代数字生活的&lt;strong&gt;所有层面&lt;/strong&gt;。从简单的信息展示到复杂的工业控制系统，只要是需要&lt;strong&gt;网络访问、跨设备、免安装&lt;/strong&gt;的场景，都是 Web 开发的领域。（新手如果还不知道是干啥的需要继续看一下，很快就能懂！）&lt;/p&gt;
 &lt;h3 id="从python的flask入手"&gt;从Python的flask入手&lt;/h3&gt;
 &lt;p&gt;　　Flask 是 Python 语言下一种相对简单便捷的 Web 开发框架，相当适合入门 Web 开发（简单的操作中获得完整的理解）、敏捷测试接口开发（快速启动可用接口、快速实现开发）&lt;/p&gt;
@@ -14,15 +14,14 @@
 &lt;li&gt;上下文：Flask 给每个请求创建的&amp;quot;临时工作台&amp;quot;。上面放着当前请求的数据（比如用户登录信息、表单参数），你在视图函数里随时能取出来用。&lt;/li&gt;
 &lt;li&gt;模板：带占位符的 HTML 文件（如 &lt;code&gt;hello {{ name }}&lt;/code&gt;）。视图函数把数据填进模板，生成最终网页发给浏览器，实现前端展示和后端逻辑的分离。&lt;/li&gt;
 &lt;li&gt;JSON：一种常见的文本数据格式（像 Python 字典的字符串版）。&lt;code&gt;{&amp;quot;name&amp;quot;: &amp;quot;张三&amp;quot;, &amp;quot;age&amp;quot;: 20}&lt;/code&gt;，前后端通信用它交换数据，Flask 用 &lt;code&gt;jsonify()&lt;/code&gt; 直接可以返回。&lt;/li&gt;
-&lt;li&gt;前后端分离：这个词其实本身有很多渊源（但这里秉着减少废话的原则），但是现在你可以理解前端和后端”不同源、分离“就是他俩运行在两个不同的程序中，这种情况下通常为了安全而需要进行跨越配置&lt;/li&gt;
+&lt;li&gt;前后端分离：这个词其实本身有很多渊源（但这里秉着减少废话的原则），但是现在你可以理解前端和后端”不同源、分离“就是他俩运行在两个不同的程序中，这种情况下通常为了安全而需要进行跨越配置（前端通常指用户面向的视图那边，后端通常代表后台逻辑那边）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="要素"&gt;要素&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;返回结果：准确来说可以是任何允许的形式，而不仅是返回 JSON、网页等这种数据&lt;/li&gt;
 &lt;li&gt;接收请求参数：请求发起方会携带一些各种形式的参数（query、请求体、表单&amp;hellip;）&lt;/li&gt;
-&lt;li&gt;模板：页面中嵌入一些专门准备被替换的标签&lt;/li&gt;
+&lt;li&gt;模板：页面中嵌入一些专门准备被替换的标签，之后被代码中定义的数据填充&lt;/li&gt;
 &lt;li&gt;跨域问题：前后端服务非同源的时候，跨服务的请求会触发跨域安全机制，需要配置一下来允许请求&lt;/li&gt;
-&lt;li&gt;数据库操作：使用ORM框架（这里选&lt;strong&gt;SQLAlchemy&lt;/strong&gt;）连接数据库并实现增删改查&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="相关资料"&gt;相关资料&lt;/h3&gt;
 &lt;ul&gt;

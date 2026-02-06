@@ -56,7 +56,10 @@
 &lt;p&gt;　　随着云原生、AI、大数据等技术爆发，行业节奏越来越快，大家更关注“效率”和“落地”，而不是“哲思”和“美学”。“禅”这种慢思维、深思考的风格显得或许不太“接地气”。零零后后程序员更倾向于“工具主义”和“实用主义”，他们可能更喜欢“黑客精神”、“开源文化”、“AI驱动”等标签，而不是“禅意”、“顿悟”这种偏哲学的表达。过去大家追求极简架构、优雅代码，现在则更强调生态系统的整合能力，比如微服务、DevOps、平台化等，这些都需要复杂的协作和工具链，不再是一个人静静敲代码的“禅修”状态。&lt;/p&gt;
 &lt;p&gt;　　但，“禅”已成过去式？其实“禅”并没有完全消失，而是悄悄地融入了其他领域！在产品设计中，它变成了“极简主义”。在用户体验中，它变成了“无感交互”、“沉浸式体验”。在工程文化中，它变成了“代码即禅”、“架构即道”。它不是被遗忘了，而是换了衣服，继续影响着技术世界。&lt;/p&gt;
 &lt;p&gt;　　技术求索，才能突破。哲学追问，才能拓展。沉淀和巧思仍在开发世界占有不可或缺的地位。技术求索，不只是为了“掌握技能”，更是为了理解世界、塑造世界、甚至重新定义世界。哲学追问的意义，不在于“得到答案”，而在于“拓展视野”和“澄清本质”。尤其在技术、设计、创作这些领域，哲学追问往往是突破惯性思维的关键。&lt;/p&gt;
-&lt;p&gt;　　现在的快节奏，有时让人感觉筋疲力尽，甚至有时候很想逃离。无论是生活中还是开发中，在这种“快节奏”灾害天气中，也许“禅”会成为我们的避风港。静下来进行一场奇思妙想的哲学追问，不断求索，努力找回那宁静的境界。技术如此，生活亦然。&lt;/p&gt;</description></item><item><title>[技术分享][004期]Web开发入门 - Python Flask教程</title><link>https://www.tyza66.top/technology_sharing/t004/</link><pubDate>Fri, 30 Jan 2026 19:36:04 +0800</pubDate><guid>https://www.tyza66.top/technology_sharing/t004/</guid><description>&lt;h3 id="说明"&gt;说明&lt;/h3&gt;
+&lt;p&gt;　　现在的快节奏，有时让人感觉筋疲力尽，甚至有时候很想逃离。无论是生活中还是开发中，在这种“快节奏”灾害天气中，也许“禅”会成为我们的避风港。静下来进行一场奇思妙想的哲学追问，不断求索，努力找回那宁静的境界。技术如此，生活亦然。&lt;/p&gt;</description></item><item><title>[技术分享][004期]Web开发入门 - Python Flask教程</title><link>https://www.tyza66.top/technology_sharing/t004/</link><pubDate>Fri, 30 Jan 2026 19:36:04 +0800</pubDate><guid>https://www.tyza66.top/technology_sharing/t004/</guid><description>&lt;h3 id="视频"&gt;视频&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;https://v.douyin.com/ANHZlk08v0Q/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="说明"&gt;说明&lt;/h3&gt;
 &lt;p&gt;　　Web 开发几乎渗透了现代数字生活的&lt;strong&gt;所有层面&lt;/strong&gt;。从简单的信息展示到复杂的工业控制系统，只要是需要&lt;strong&gt;网络访问、跨设备、免安装&lt;/strong&gt;的场景，都是 Web 开发的领域。（新手如果还不知道是干啥的需要继续看一下，很快就能懂！）&lt;/p&gt;
 &lt;h3 id="从python的flask入手"&gt;从Python的flask入手&lt;/h3&gt;
 &lt;p&gt;　　Flask 是 Python 语言下一种相对简单便捷的 Web 开发框架，相当适合入门 Web 开发（简单的操作中获得完整的理解）、敏捷测试接口开发（快速启动可用接口、快速实现开发）&lt;/p&gt;

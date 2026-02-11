@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>tyza66的博客</title><link>https://www.tyza66.top/</link><description>Recent content on tyza66的博客</description><generator>Hugo -- 0.155.3</generator><language>zh-cn</language><lastBuildDate>Fri, 06 Feb 2026 19:36:04 +0800</lastBuildDate><atom:link href="https://www.tyza66.top/index.xml" rel="self" type="application/rss+xml"/><item><title>[技术分享][005期]分享一些逻辑 2026</title><link>https://www.tyza66.top/technology_sharing/t005/</link><pubDate>Fri, 06 Feb 2026 19:36:04 +0800</pubDate><guid>https://www.tyza66.top/technology_sharing/t005/</guid><description>&lt;h3 id="一人类具有相同或相似的大脑别人能想到理解你也能想到"&gt;一、人类具有相同或相似的大脑，别人能想到（理解）你也能想到&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>tyza66的博客</title><link>https://www.tyza66.top/</link><description>Recent content on tyza66的博客</description><generator>Hugo -- 0.155.3</generator><language>zh-cn</language><lastBuildDate>Wed, 11 Feb 2026 11:36:04 +0800</lastBuildDate><atom:link href="https://www.tyza66.top/index.xml" rel="self" type="application/rss+xml"/><item><title>[技术分享][006期]数据库一次全通！（以 SQL 型为例）</title><link>https://www.tyza66.top/technology_sharing/t006/</link><pubDate>Wed, 11 Feb 2026 11:36:04 +0800</pubDate><guid>https://www.tyza66.top/technology_sharing/t006/</guid><description>&lt;h3 id="说明"&gt;说明&lt;/h3&gt;
+&lt;p&gt;　　你会发现，Web 开发中服务器接受一个请求正常不就是走那个执行流程产生一个返回结果返回回去吗，事实也是这样&lt;/p&gt;
+&lt;p&gt;　　在常规的Web开发中，从控制器接收到请求命令之后可以执行一段逻辑，而在这段逻辑中我们可以设定符合相应逻辑的特定操作（其中一种常见的操作就是读写数据）之后把数据拼装成特定的形式返回给请求方
+　　
+　　数据虽然可以存储在任何介质中，比如文本文件，可是文本文件太大了读写就会变慢，这时候我们就会想到按某种方式去分区存储（比如放在不同类型的文件夹、不同名称的文件）&amp;hellip;
+　　
+　　然后为了图读写方便，我们还要将文本中的每行都固定一个格式，跟咱们选的编程语言能相互搭配，快速转换成这个语言支持的变量&amp;hellip;&lt;/p&gt;
+&lt;p&gt;　　你又感觉存硬盘里面读取太慢了，改成选择性保存到内存&amp;hellip; 升级索引方式&amp;hellip; 优化查找逻辑&amp;hellip;&lt;/p&gt;
+&lt;p&gt;　　之后改改这改改那&amp;hellip; 最后你就设计出来一个数据库
+　　&lt;/p&gt;
+&lt;h3 id="如何界定快慢"&gt;如何界定快慢&lt;/h3&gt;
+&lt;p&gt;　　暂且认为快慢只取决于操作复杂度和传输大小。
+　　&lt;/p&gt;
+&lt;h3 id="数据库能干啥"&gt;数据库能干啥&lt;/h3&gt;
+&lt;p&gt;　　现在已经有的成熟的数据库类型有很多种，能存储的数据也多种多样，包括表单、对象、纯文本、向量、图片&amp;hellip;&lt;/p&gt;
+&lt;p&gt;　　其实有这样一种说法&amp;ndash;“语言是逻辑的边界”，也就是说其实只要能存有序的二进制、或者文本，其实就能存一切&amp;hellip;（如果你不理解，先想想密码学为什么存在）&lt;/p&gt;
+&lt;p&gt;　　之前我说过，一切能看见的功能其实都可以自己实现，一方面人类大脑具有相同或者相似的结构，别人能想到，你也能想到。另一方面，大家用的编程语言、工具啥的也是相同或相似的。&lt;/p&gt;
+&lt;p&gt;　　&amp;ldquo;没有最好只有最合适&amp;rdquo;，所以没必要什么都去手搓（让然手搓有时候也有自己的好处），已有的很多数据库已经做的很好了：效率高、可分离、优化好、稳定、成熟、暗病已被解决、省事、遇到问题有解决方案&amp;hellip;&lt;/p&gt;
+&lt;p&gt;　　现有的数据库有：关系型数据库（通常使用 SQL作为交互指令）、缓存数据库、文档型数据库、键值型数据库、列式数据库、图数据库层次性数据库、面对对象数据库、时序数据库、向量数据库&amp;hellip;&lt;/p&gt;
+&lt;p&gt;　　任何软件都有一套操作逻辑，数据库软件也一样。比如说常见的关系型数据库（PostgreSQL、MySQL、SQLServer、Oracle等），他们都是使用 SQL 去交互的（相似但不完全相同，但操作逻辑基本一致），换句话说就是这些数据库的制作者认为使用 SQL 操作（与其交互）这些种类软件是最合适的&lt;/p&gt;
+&lt;p&gt;　　外部运行一个软件再与其交互的好处有挺多的，比如可以分离进程、分离存储、分机器、便于灾备和负载均衡、兼容多语言&amp;hellip; （而直接代码实现也有自己的好处），这个自己选最合适的方式就行&lt;/p&gt;
+&lt;p&gt;　　对于一种数据库要关注的点就是操作逻辑、增删改查、原子性保证（事务）、便捷优化方式（比如索引），如果你想非常在最大程度上优化就需要理解原理了（比如全查后过滤和同时条件查询的选择、SQL 语句嵌套顺序的选择）&lt;/p&gt;
+&lt;p&gt;　　快速理解一个数据库的操作逻辑的方法就是用一下，如果有可视化操作工具就更好了（例如 Navicat），一般使用不同编程语言去连接数据库的时候，我们会用数据库驱动连接（一般是官方提供的）、数据库中间件、ORM 等工具，甚至可以一句 SQL 也不写，按照编程语言的特性去调用被封装过的操作，这个杠杆加大了“理解远大于背诵”
+　　
+　　可以通过可视化软件快速理表、字段、查询&amp;hellip;&lt;/p&gt;
+&lt;p&gt;　　以SQL 的逻辑为例，基础操作可以理解为“【操作】（为操作目标服务的修饰）”，例如：
+　　- insert into `user`(name, email, age) values (&amp;lsquo;sdm&amp;rsquo;, &amp;lsquo;&lt;a href="mailto:shun_@outlook.com"&gt;shun_@outlook.com&lt;/a&gt;&amp;rsquo;, 26) [修饰]; 是“【操作】（【目标】【来源】【修饰】）”
+　　- select * from `user` where id &amp;lt; 10; 也是 “【操作】（【目标】【来源】【修饰】）”
+　　- update `user` set age = 30 where name = &amp;lsquo;Alice&amp;rsquo;; 是“【操作】（【目标】【修饰】）“
+　　- delete from `user` where id = 5; 也是“【操作】（【目标】【修饰】）“&lt;/p&gt;</description></item><item><title>[技术分享][005期]分享一些逻辑 2026</title><link>https://www.tyza66.top/technology_sharing/t005/</link><pubDate>Fri, 06 Feb 2026 19:36:04 +0800</pubDate><guid>https://www.tyza66.top/technology_sharing/t005/</guid><description>&lt;h3 id="一人类具有相同或相似的大脑别人能想到理解你也能想到"&gt;一、人类具有相同或相似的大脑，别人能想到（理解）你也能想到&lt;/h3&gt;
 &lt;p&gt;　　这个观点来自知名UP主“底层原理/底层原理1988”的一期视频，我在考研那段时间我觉得是最宝贵的一个收获。&lt;/p&gt;
 &lt;p&gt;　　这个思维在开发领域也是一个有力的神器。
 　　

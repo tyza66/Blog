@@ -189,7 +189,8 @@
 外部运行一个软件再与其交互的好处有挺多的，比如可以分离进程、分离存储、分机器、便于灾备和负载均衡、兼容多语言… （而直接代码实现也有自己的好处），这个自己选最合适的方式就行
 对于一种数据库要关注的点就是操作逻辑、增删改查、原子性保证（事务）、便捷优化方式（比如索引），如果你想非常在最大程度上优化就需要理解原理了（比如全查后过滤和同时条件查询的选择、SQL 语句嵌套顺序的选择）
 快速理解一个数据库的操作逻辑的方法就是用一下，如果有可视化操作工具就更好了（例如 Navicat），一般使用不同编程语言去连接数据库的时候，我们会用数据库驱动连接（一般是官方提供的）、数据库中间件、ORM 等工具，甚至可以一句 SQL 也不写，按照编程语言的特性去调用被封装过的操作，这个杠杆加大了“理解远大于背诵” 可以通过可视化软件快速理表、字段、查询…
-以SQL 的逻辑为例，基础操作可以理解为“【操作】（为操作目标服务的修饰）”，例如： - insert into `user`(name, email, age) values (‘sdm’, ‘shun_@outlook.com’, 26) [修饰]; 是“【操作】（【目标】【来源】【修饰】）” - select * from `user` where id &lt; 10; 也是 “【操作】（【目标】【来源】【修饰】）” - update `user` set age = 30 where name = ‘Alice’; 是“【操作】（【目标】【修饰】）“ - delete from `user` where id = 5; 也是“【操作】（【目标】【修饰】）“
+以SQL 的逻辑为例，基础操作可以理解为“【操作】（为操作目标服务的修饰）”，例如：
+- insert into `user`(name, email, age) values (‘sdm’, ‘shun_@outlook.com’, 26) [修饰]; 是“【操作】（【目标】【来源】【修饰】）” - select * from `user` where id &lt; 10; 也是 “【操作】（【目标】【来源】【修饰】）” - update `user` set age = 30 where name = ‘Alice’; 是“【操作】（【目标】【修饰】）“ - delete from `user` where id = 5; 也是“【操作】（【目标】【修饰】）“
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2026-02-11 11:36:04 +0800 CST'>February 11, 2026</span>&nbsp;·&nbsp;<span>tyza66</span></footer>

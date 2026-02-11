@@ -44,6 +44,7 @@ title = '[技术分享][006期]数据库一次全通！（以 SQL 型为例）'
 　　可以通过可视化软件快速理表、字段、查询...
 
 　　以SQL 的逻辑为例，基础操作可以理解为“【操作】（为操作目标服务的修饰）”，例如：
+
 　　- insert into \`user\`(name, email, age) values ('sdm', 'shun_@outlook.com', 26) \[修饰\]; 是“【操作】（【目标】【来源】【修饰】）”
 　　- select \* from \`user\` where id < 10; 也是 “【操作】（【目标】【来源】【修饰】）”
 　　- update \`user\` set age = 30 where name = 'Alice'; 是“【操作】（【目标】【修饰】）“

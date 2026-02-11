@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>技术分享 on tyza66的博客</title>
-    <link>http://localhost:1313/technology_sharing/</link>
+    <link>https://www.tyza66.top/technology_sharing/</link>
     <description>Recent content in 技术分享 on tyza66的博客</description>
     <generator>Hugo -- 0.155.0</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 06 Feb 2026 19:36:04 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/technology_sharing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.tyza66.top/technology_sharing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[技术分享][005期]分享一些逻辑 2026</title>
-      <link>http://localhost:1313/technology_sharing/t005/</link>
+      <link>https://www.tyza66.top/technology_sharing/t005/</link>
       <pubDate>Fri, 06 Feb 2026 19:36:04 +0800</pubDate>
-      <guid>http://localhost:1313/technology_sharing/t005/</guid>
+      <guid>https://www.tyza66.top/technology_sharing/t005/</guid>
       <description>&lt;h3 id=&#34;一人类具有相同或相似的大脑别人能想到理解你也能想到&#34;&gt;一、人类具有相同或相似的大脑，别人能想到（理解）你也能想到&lt;/h3&gt;
 &lt;p&gt;　　这个观点来自知名UP主“底层原理/底层原理1988”的一期视频，我在考研那段时间我觉得是最宝贵的一个收获。&lt;/p&gt;
 &lt;p&gt;　　这个思维在开发领域也是一个有力的神器。
@@ -56,9 +56,9 @@
     </item>
     <item>
       <title>[技术分享][004期]Web开发入门 - Python Flask教程</title>
-      <link>http://localhost:1313/technology_sharing/t004/</link>
+      <link>https://www.tyza66.top/technology_sharing/t004/</link>
       <pubDate>Fri, 30 Jan 2026 19:36:04 +0800</pubDate>
-      <guid>http://localhost:1313/technology_sharing/t004/</guid>
+      <guid>https://www.tyza66.top/technology_sharing/t004/</guid>
       <description>&lt;h3 id=&#34;视频&#34;&gt;视频&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;https://v.douyin.com/ANHZlk08v0Q/
 &lt;/code&gt;&lt;/pre&gt;
@@ -98,9 +98,9 @@
     </item>
     <item>
       <title>[技术分享][003期]Python虚拟环境这样用(UV)</title>
-      <link>http://localhost:1313/technology_sharing/t003/</link>
+      <link>https://www.tyza66.top/technology_sharing/t003/</link>
       <pubDate>Fri, 30 Jan 2026 19:36:03 +0800</pubDate>
-      <guid>http://localhost:1313/technology_sharing/t003/</guid>
+      <guid>https://www.tyza66.top/technology_sharing/t003/</guid>
       <description>&lt;h3 id=&#34;视频教程&#34;&gt;视频教程&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://v.douyin.com/bHdcmkaVSFI/&#34;&gt;https://v.douyin.com/bHdcmkaVSFI/&lt;/a&gt;&lt;/li&gt;
@@ -152,9 +152,9 @@
     </item>
     <item>
       <title>[技术分享][002期]通过“隔离”和“原子化”来灵活实现“低耦合”</title>
-      <link>http://localhost:1313/technology_sharing/t002/</link>
+      <link>https://www.tyza66.top/technology_sharing/t002/</link>
       <pubDate>Fri, 30 Jan 2026 19:36:02 +0800</pubDate>
-      <guid>http://localhost:1313/technology_sharing/t002/</guid>
+      <guid>https://www.tyza66.top/technology_sharing/t002/</guid>
       <description>&lt;p&gt;　　之前的一篇文章中，我们探讨了不同编程语言之间的交互方式，当然那篇技术分享文章已经是三年前的了。最近接触了更多关于这方面的东西，就比如Docker和Containerd之间交互所用到的Unix Socket、RPC其实可以有更多巧妙应用，甚至作为用户界面。当然这次跟这个也是有关系的，本期的文章我主要想探讨的问题是所谓评判程序优秀程度时朗朗上口的两个指标“高内聚低耦合”，这是一个软件工程学中的概念，“内聚性”使得模块更加独立，“低耦合”使得模块之间的关系减弱。通常我们使用编程语言的一些特性还有巧妙的设计模式增强内聚、降低耦合。从而使得代码易于维护和重用，但这并不是强制的。这期我要说一些思路，但并不是所谓银弹，也就是说这个方案并不是一个万能钥匙，不过追求易于维护和职责分离的时候走投无路了，可以试一试我说的这些方案。&lt;/p&gt;
 &lt;p&gt;　　首先我说一个背景，假如说一个操作系统没有内置进程管理器，我们要做一个进程管理器，职责就是管理系统进程（类似systemd）。首先我们就会想到参考systemd对吧，先不说他的CLI 界面，就是这个模式来说，systemctl本身功能就是管理进程相关的，这个不会受外界影响，那它管理的进程功能应用呢？细想一下，是不是systemd 对业务进程是一种“一厢情愿”的超低耦合！那加入我们自己想做一个进程管理器，你会怎么做，难道直接将运行的业务内置进进程管理器？不过也不是不可以，看这个业务架构需要的细分程度，不过我们当然还是追求一定的通用性。现在我们讨论一种架构较为庞大，且各部分需要复用或可能需要复用，并且不同层次的服务都可能被直接或间接调用。&lt;/p&gt;
 &lt;p&gt;　　再来看systemd的CLI，就是我们常用的systemctl命令，它跟systemd之间呢？容易发现systemctl 与 systemd 之间是“进程隔离 + 文本协议（D-Bus）”的松耦合，就像Docker跟Containerd之间是用Unix Socket发送grpc消息一样。他们的共性就是-“进程隔离”，而根据我之前的文章，进程之间是有很多通信方式的，甚至可以跨设备、跨编程语言、跨服务。所以说在这个“颗粒度”的“隔离”是可行的，并且有效的增强高内聚低耦合的手段。&lt;/p&gt;
@@ -251,9 +251,9 @@
     </item>
     <item>
       <title>[技术分享][001期]不同编程语言之间如何通信合作！分布式只是其中一种情况！</title>
-      <link>http://localhost:1313/technology_sharing/t001/</link>
+      <link>https://www.tyza66.top/technology_sharing/t001/</link>
       <pubDate>Mon, 14 Aug 2023 19:36:01 +0800</pubDate>
-      <guid>http://localhost:1313/technology_sharing/t001/</guid>
+      <guid>https://www.tyza66.top/technology_sharing/t001/</guid>
       <description>&lt;h3 id=&#34;一前言&#34;&gt;一、前言&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;我们学过C、Java、Python、Golang、Ruby&amp;hellip;等等高级语言，它们都有自己的优点、特性、语法。你是否想过诸如这样的问题：这些高级语言之间有什么关系、有什么共性、如何只发挥自身优势规避劣势、如何相互协调合作、如何互相通信呢？&lt;/li&gt;

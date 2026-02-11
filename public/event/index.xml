@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>忆往特 on tyza66的博客</title>
-    <link>https://www.tyza66.top/event/</link>
+    <link>http://localhost:1313/event/</link>
     <description>Recent content in 忆往特 on tyza66的博客</description>
     <generator>Hugo -- 0.155.0</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 30 Jan 2026 19:36:09 +0800</lastBuildDate>
-    <atom:link href="https://www.tyza66.top/event/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/event/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[忆往特][002期]回忆一下以前在渤海大学</title>
-      <link>https://www.tyza66.top/event/e002/</link>
+      <link>http://localhost:1313/event/e002/</link>
       <pubDate>Fri, 30 Jan 2026 19:36:09 +0800</pubDate>
-      <guid>https://www.tyza66.top/event/e002/</guid>
+      <guid>http://localhost:1313/event/e002/</guid>
       <description>&lt;p&gt;　　回忆一下本科在渤海大学的时候，一些我记忆深刻的事情和有趣的事情。渤海大学的校园生活于我而言十分精彩，我所接触到的部分中，领导、老师都非常亲切，班级团结。在这里我接触到了一些专业性很强的老师，也交到了许多使我受益终身的朋友，还有找到了后来一直在我身边，陪我走南闯北女朋友。&lt;/p&gt;
 &lt;p&gt;　　最开始考学的时候，我对大学这些东西其实没什么概念，我一直以为是到什么阶段就去哪呆着就行了。学习方面其实我一直挺佛系，不强求什么，但又经常怕成绩不好回家挨骂（其实不多，但就是怕家里人伤心）。考高中就发挥失常考的普通高中，高中又发挥失常没考好，我的高考数学分数只有60分（平时模考能100左右）。&lt;/p&gt;
 &lt;p&gt;　　初中的时候刚接触编程的时候，最开始是学了一些当时在社区比较火爆的IAPP（后来学其他主流编程语言发现这个东西很冷门），这个东西DEBUG非常费劲，但是高级语言编程基础语法和用法应该有的都有，当时我觉得这些基础操作啥的，加减乘除输入输出啥的，好像必须结合那些高级的数学公式，方法才能打成更多神奇的作用，而且很多时候英语比较重要，甚至说想开发好程序要了解各行各业，各种历史背景。我一想这不就是学校里面教的东西吗，反正去也是呆着，不如学一下，顺带脚的事，后来很长一段时间成绩还说的过去&amp;hellip; 就这样稀里糊涂的考到了高中，考到了大学&amp;hellip;&lt;/p&gt;
@@ -68,9 +68,9 @@
     </item>
     <item>
       <title>[忆往特][001期]记录一下玩随身WIFI的过程</title>
-      <link>https://www.tyza66.top/event/e001/</link>
+      <link>http://localhost:1313/event/e001/</link>
       <pubDate>Sat, 20 Sep 2025 19:36:08 +0800</pubDate>
-      <guid>https://www.tyza66.top/event/e001/</guid>
+      <guid>http://localhost:1313/event/e001/</guid>
       <description>&lt;p&gt;　　记录一下我从开始玩随身WIFI，各种玩机，不断更换设备，到稳定使用，到机缘巧合实现双不限下车的历程。&lt;/p&gt;
 &lt;p&gt;　　最开始，那段时间经常在B站的“极客DIY”区刷到那种说十元搭建Minecraft服务器的视频、十元搭建网站服务器的视频啥的，那时候《羊了个羊》爆火，很多人也用十元搭建Web服务器运行《羊了个羊》的Web仿作页面。我看了一些这类视频，发现他们都是买的那种后来被我们称为“棒子”的插USB那种不带电池的随身WIFI，一开始我不以为然，后来我看了一个叫做“Gray研究日常”的UP主发的关于刷安卓、锁频、刷linux等操作的视频，但这并不是我入坑的根本原因。我看视频介绍里还有粉丝群我就寻思进去看看有什么好的玩法，进群以后我就开始跟大家交流，并在群文件找到一些神奇的东西，跟免流相关的（当然其实不太好使，不要违法）。当时我就是对这种操作的原理啥的比较感兴趣（因为小时候腾讯大王卡期间在葫芦侠等社区就经常看见），于是从群友分享的链接，花了十块钱上车，又从拼多多买了风扇，自己用烙铁改装上，开始了第一个随身WIFI。当时我是跟群里买的山东电信卡，网速其实不太行，尽管锁频了还是1M（8-10mbps）左右的网速。&lt;/p&gt;
 &lt;div align=&#34;center&#34;&gt;

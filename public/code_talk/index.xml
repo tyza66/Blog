@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>码上杂谈 on tyza66的博客</title>
-    <link>https://www.tyza66.top/code_talk/</link>
+    <link>http://localhost:1313/code_talk/</link>
     <description>Recent content in 码上杂谈 on tyza66的博客</description>
     <generator>Hugo -- 0.155.0</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 30 Jan 2026 19:36:07 +0800</lastBuildDate>
-    <atom:link href="https://www.tyza66.top/code_talk/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/code_talk/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[码上杂谈][002期]“禅”已成过去式？“禅”并没有完全消失！</title>
-      <link>https://www.tyza66.top/code_talk/c002/</link>
+      <link>http://localhost:1313/code_talk/c002/</link>
       <pubDate>Fri, 30 Jan 2026 19:36:07 +0800</pubDate>
-      <guid>https://www.tyza66.top/code_talk/c002/</guid>
+      <guid>http://localhost:1313/code_talk/c002/</guid>
       <description>&lt;p&gt;　　“禅”（Zen）是一个曾经在技术界十分火爆的词汇，它有着这样几层含义：极简主义、专注与流动、直觉与顿悟、自然之道&amp;hellip; 这个词汇同时强调了简洁、高雅、顿悟、自然，简单来说就是一种巧思的模式和境界，正如这个字的宗教或哲学概念。&lt;/p&gt;
 &lt;p&gt;　　比起零几年的时候，总觉得这些年生活的节奏越来越快，记得小时候晚上七八点钟全家都已经深度入睡了，几乎没有触及到十一二点的领域，当时电视和广播里面还会有一些关于午夜十二点的都市传说。不过现在觉得熬夜到十一二点已经是平常了，也许是娱乐方式更多了，也许是生活中要处理的事情多了，总之人们（可能只是我身边）总有理由睡得很晚。&lt;/p&gt;
 &lt;p&gt;　　记得我2023年第一次到大连这座城市的时候，当时临时住在一个宾馆，对面是一个上面写着404的大厦，下午饿了去找吃的，走到了一个全是玻璃墙的大楼的一段落路上看见很多人，他们走的飞快，好像都非常着急。每个人都这样，无论男女老少，当时我是大四来大连实习，当时我就感叹，大城市的生活节奏是真快啊！后来又去北京工作、在杭州送过外卖，也总感觉世界变得快了，甚至有些地方有点快的过度了。&lt;/p&gt;
@@ -24,9 +24,9 @@
     </item>
     <item>
       <title>[码上杂谈][001期]一道笔试题竟如此离谱！</title>
-      <link>https://www.tyza66.top/code_talk/c001/</link>
+      <link>http://localhost:1313/code_talk/c001/</link>
       <pubDate>Tue, 08 Aug 2023 19:36:06 +0800</pubDate>
-      <guid>https://www.tyza66.top/code_talk/c001/</guid>
+      <guid>http://localhost:1313/code_talk/c001/</guid>
       <description>&lt;h3 id=&#34;一起因&#34;&gt;一、起因&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;最近是实习找工作季，很多同学都在参加各种各样的面试、笔试，我的一个同学在参加某公司的笔试时，遇到了一道很有意思的题目，我也是在他的分享中看到的这道题目。&lt;/li&gt;

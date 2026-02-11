@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>[技术分享][003期]Python虚拟环境这样用(UV) | tyza66的博客</title>
 <meta name="keywords" content="">
 <meta name="description" content="视频教程
@@ -56,16 +56,16 @@ uv init myproj 创建标准的 uv 项目骨架
 
 uv add xxx 在UV项目中添加依赖">
 <meta name="author" content="tyza66">
-<link rel="canonical" href="https://www.tyza66.top/technology_sharing/t003/">
+<link rel="canonical" href="http://localhost:1313/technology_sharing/t003/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://www.tyza66.top/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://www.tyza66.top/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://www.tyza66.top/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://www.tyza66.top/apple-touch-icon.png">
-<link rel="mask-icon" href="https://www.tyza66.top/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://www.tyza66.top/technology_sharing/t003/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/technology_sharing/t003/">
 <noscript>
     <style>
         #theme-toggle,
@@ -117,128 +117,13 @@ uv add xxx 在UV项目中添加依赖">
         document.querySelector("html").dataset.theme = 'light';
     }
 
-</script><meta property="og:url" content="https://www.tyza66.top/technology_sharing/t003/">
-  <meta property="og:site_name" content="tyza66的博客">
-  <meta property="og:title" content="[技术分享][003期]Python虚拟环境这样用(UV)">
-  <meta property="og:description" content="视频教程 https://v.douyin.com/bHdcmkaVSFI/ 问题导向 很多的 Python 依赖（轮子）版本是相耦合的，但是系统总体的 Python 环境是唯一的，如果想运行不同依赖版本下的项目代码，就需要重复性的卸载和删除这些库 有时候单纯的想试一下某个轮子，但是还担心安装之后卸载不干净 一些 Python 环境是不带包管理器 pip 的，例如单纯的 cPython 解决方案 针对依赖关系，使用虚拟环境 针对没有 pip 的情况，使用 Python 环境变量，或者自己补个 pip Conda是这样 创建完全隔离的运行环境，还能装 C/C&#43;&#43;、R、CUDA、MKL、FFmpeg 等非 Python 二进制 安装前先计算整体依赖闭包，发现冲突会拒绝执行 体积大、启动慢，但是完全独立，就是不要求 conda 环境外部的系统环境有 Python conda create -n env、conda install xxx UV 能做到 快速创建虚拟环境，管理依赖 直接补 pip，在虚拟环境随便用 轻量、块，安装轻量、用起来快 UV有哪些操作 uv venv 创建虚拟环境，可以直接在虚拟环境下使用传统的requirements文件和基本的 pip 操作直接用
-uv init myproj 创建标准的 uv 项目骨架
-UV 基本项目骨架 uv init myproj # 生成 # myproj/ # ├── .python-version (可选，pin 3.11 等) # ├── pyproject.toml 项目元数据&#43;依赖 # ├── README.md # ├── .gitignore # └── src/ # └── myproj/ # └── __init__.py uv add xxx 在UV项目中添加依赖">
-  <meta property="og:locale" content="zh-cn">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="technology_sharing">
-    <meta property="article:published_time" content="2026-01-30T19:36:03+08:00">
-    <meta property="article:modified_time" content="2026-01-30T19:36:03+08:00">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[技术分享][003期]Python虚拟环境这样用(UV)">
-<meta name="twitter:description" content="视频教程
-
-https://v.douyin.com/bHdcmkaVSFI/
-
-问题导向
-
-很多的 Python 依赖（轮子）版本是相耦合的，但是系统总体的 Python 环境是唯一的，如果想运行不同依赖版本下的项目代码，就需要重复性的卸载和删除这些库
-有时候单纯的想试一下某个轮子，但是还担心安装之后卸载不干净
-一些 Python 环境是不带包管理器 pip 的，例如单纯的 cPython
-
-解决方案
-
-针对依赖关系，使用虚拟环境
-针对没有 pip 的情况，使用 Python 环境变量，或者自己补个 pip
-
-Conda是这样
-
-创建完全隔离的运行环境，还能装 C/C&#43;&#43;、R、CUDA、MKL、FFmpeg 等非 Python 二进制
-安装前先计算整体依赖闭包，发现冲突会拒绝执行
-体积大、启动慢，但是完全独立，就是不要求 conda 环境外部的系统环境有 Python
-conda create -n env、conda install xxx
-
-UV 能做到
-
-快速创建虚拟环境，管理依赖
-直接补 pip，在虚拟环境随便用
-轻量、块，安装轻量、用起来快
-
-UV有哪些操作
-
-
-uv venv 创建虚拟环境，可以直接在虚拟环境下使用传统的requirements文件和基本的 pip 操作直接用
-
-
-uv init myproj 创建标准的 uv 项目骨架
-  UV 基本项目骨架  
-  uv init myproj               # 生成
-  # myproj/
-  # ├── .python-version        (可选，pin 3.11 等)
-  # ├── pyproject.toml         项目元数据&#43;依赖
-  # ├── README.md
-  # ├── .gitignore
-  # └── src/
-  #     └── myproj/
-  #         └── __init__.py
-
-
-uv add xxx 在UV项目中添加依赖">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "技术分享",
-      "item": "https://www.tyza66.top/technology_sharing/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "[技术分享][003期]Python虚拟环境这样用(UV)",
-      "item": "https://www.tyza66.top/technology_sharing/t003/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "[技术分享][003期]Python虚拟环境这样用(UV)",
-  "name": "[技术分享][003期]Python虚拟环境这样用(UV)",
-  "description": "视频教程 https://v.douyin.com/bHdcmkaVSFI/ 问题导向 很多的 Python 依赖（轮子）版本是相耦合的，但是系统总体的 Python 环境是唯一的，如果想运行不同依赖版本下的项目代码，就需要重复性的卸载和删除这些库 有时候单纯的想试一下某个轮子，但是还担心安装之后卸载不干净 一些 Python 环境是不带包管理器 pip 的，例如单纯的 cPython 解决方案 针对依赖关系，使用虚拟环境 针对没有 pip 的情况，使用 Python 环境变量，或者自己补个 pip Conda是这样 创建完全隔离的运行环境，还能装 C/C++、R、CUDA、MKL、FFmpeg 等非 Python 二进制 安装前先计算整体依赖闭包，发现冲突会拒绝执行 体积大、启动慢，但是完全独立，就是不要求 conda 环境外部的系统环境有 Python conda create -n env、conda install xxx UV 能做到 快速创建虚拟环境，管理依赖 直接补 pip，在虚拟环境随便用 轻量、块，安装轻量、用起来快 UV有哪些操作 uv venv 创建虚拟环境，可以直接在虚拟环境下使用传统的requirements文件和基本的 pip 操作直接用\nuv init myproj 创建标准的 uv 项目骨架\nUV 基本项目骨架 uv init myproj # 生成 # myproj/ # ├── .python-version (可选，pin 3.11 等) # ├── pyproject.toml 项目元数据+依赖 # ├── README.md # ├── .gitignore # └── src/ # └── myproj/ # └── __init__.py uv add xxx 在UV项目中添加依赖\n",
-  "keywords": [
-    
-  ],
-  "articleBody": "视频教程 https://v.douyin.com/bHdcmkaVSFI/ 问题导向 很多的 Python 依赖（轮子）版本是相耦合的，但是系统总体的 Python 环境是唯一的，如果想运行不同依赖版本下的项目代码，就需要重复性的卸载和删除这些库 有时候单纯的想试一下某个轮子，但是还担心安装之后卸载不干净 一些 Python 环境是不带包管理器 pip 的，例如单纯的 cPython 解决方案 针对依赖关系，使用虚拟环境 针对没有 pip 的情况，使用 Python 环境变量，或者自己补个 pip Conda是这样 创建完全隔离的运行环境，还能装 C/C++、R、CUDA、MKL、FFmpeg 等非 Python 二进制 安装前先计算整体依赖闭包，发现冲突会拒绝执行 体积大、启动慢，但是完全独立，就是不要求 conda 环境外部的系统环境有 Python conda create -n env、conda install xxx UV 能做到 快速创建虚拟环境，管理依赖 直接补 pip，在虚拟环境随便用 轻量、块，安装轻量、用起来快 UV有哪些操作 uv venv 创建虚拟环境，可以直接在虚拟环境下使用传统的requirements文件和基本的 pip 操作直接用\nuv init myproj 创建标准的 uv 项目骨架\nUV 基本项目骨架 uv init myproj # 生成 # myproj/ # ├── .python-version (可选，pin 3.11 等) # ├── pyproject.toml 项目元数据+依赖 # ├── README.md # ├── .gitignore # └── src/ # └── myproj/ # └── __init__.py uv add xxx 在UV项目中添加依赖\nuv sync 根据 lock 文件一键同步环境（一次性装好）\nuv 比较轻量，并且比 python 自带的虚拟环境更加强大\nUV的局限性 默认可以切换的 Python 版本的范围有限（3.8.0 – 3.13 ） Python自带的 Python 3.3 开始自带虚拟环境的功能 python -m venv 环境名 # 例如 python -m venv venv 这个跟uv中直接创建的虚拟环境的形式一样，但是具体实现不一样，uv的更快 完整资料 https://docs.astral.sh/uv/ https://github.com/astral-sh/uv https://github.com/tyza66/PyVenvDemo https://github.com/pypy/pypy ",
-  "wordCount" : "132",
-  "inLanguage": "en",
-  "datePublished": "2026-01-30T19:36:03+08:00",
-  "dateModified": "2026-01-30T19:36:03+08:00",
-  "author":{
-    "@type": "Person",
-    "name": "tyza66"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://www.tyza66.top/technology_sharing/t003/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "tyza66的博客",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.tyza66.top/favicon.ico"
-    }
-  }
-}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.tyza66.top/" accesskey="h" title="tyza66的博客 (Alt + H)">tyza66的博客</a>
+            <a href="http://localhost:1313/" accesskey="h" title="tyza66的博客 (Alt + H)">tyza66的博客</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -264,37 +149,37 @@ uv add xxx 在UV项目中添加依赖">
         </div>
         <ul id="menu">
             <li>
-                <a href="https://www.tyza66.top/" title="首页">
+                <a href="http://localhost:1313/" title="首页">
                     <span>首页</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.tyza66.top/technology_sharing/" title="技术分享">
+                <a href="http://localhost:1313/technology_sharing/" title="技术分享">
                     <span>技术分享</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.tyza66.top/open_source_demonstration/" title="开源演示">
+                <a href="http://localhost:1313/open_source_demonstration/" title="开源演示">
                     <span>开源演示</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.tyza66.top/code_talk/" title="码上杂谈">
+                <a href="http://localhost:1313/code_talk/" title="码上杂谈">
                     <span>码上杂谈</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.tyza66.top/event/" title="忆往特">
+                <a href="http://localhost:1313/event/" title="忆往特">
                     <span>忆往特</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.tyza66.top/fantasy/" title="范特西">
+                <a href="http://localhost:1313/fantasy/" title="范特西">
                     <span>范特西</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.tyza66.top/about/" title="关于">
+                <a href="http://localhost:1313/about/" title="关于">
                     <span>关于</span>
                 </a>
             </li>
@@ -398,7 +283,7 @@ uv add xxx 在UV项目中添加依赖">
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="https://www.tyza66.top/">tyza66的博客</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/">tyza66的博客</a></span> · 
 
     <span>
         Powered by

@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>技术分享 on tyza66的博客</title><link>https://www.tyza66.top/technology_sharing/</link><description>Recent content in 技术分享 on tyza66的博客</description><generator>Hugo -- 0.155.3</generator><language>zh-cn</language><lastBuildDate>Wed, 11 Feb 2026 11:36:04 +0800</lastBuildDate><atom:link href="https://www.tyza66.top/technology_sharing/index.xml" rel="self" type="application/rss+xml"/><item><title>[技术分享][006期]数据库一次全通！（以 SQL 型为例）</title><link>https://www.tyza66.top/technology_sharing/t006/</link><pubDate>Wed, 11 Feb 2026 11:36:04 +0800</pubDate><guid>https://www.tyza66.top/technology_sharing/t006/</guid><description>&lt;h3 id="说明"&gt;说明&lt;/h3&gt;
 &lt;p&gt;　　你会发现，Web 开发中服务器接受一个请求正常不就是走那个执行流程产生一个返回结果返回回去吗，事实也是这样&lt;/p&gt;
-&lt;p&gt;　　在常规的Web开发中，从控制器接收到请求命令之后可以执行一段逻辑，而在这段逻辑中我们可以设定符合相应逻辑的特定操作（其中一种常见的操作就是读写数据）之后把数据拼装成特定的形式返回给请求方
-　　
-　　数据虽然可以存储在任何介质中，比如文本文件，可是文本文件太大了读写就会变慢，这时候我们就会想到按某种方式去分区存储（比如放在不同类型的文件夹、不同名称的文件）&amp;hellip;
-　　
-　　然后为了图读写方便，我们还要将文本中的每行都固定一个格式，跟咱们选的编程语言能相互搭配，快速转换成这个语言支持的变量&amp;hellip;&lt;/p&gt;
+&lt;p&gt;　　在常规的Web开发中，从控制器接收到请求命令之后可以执行一段逻辑，而在这段逻辑中我们可以设定符合相应逻辑的特定操作（其中一种常见的操作就是读写数据）之后把数据拼装成特定的形式返回给请求方&lt;/p&gt;
+&lt;p&gt;　　数据虽然可以存储在任何介质中，比如文本文件，可是文本文件太大了读写就会变慢，这时候我们就会想到按某种方式去分区存储（比如放在不同类型的文件夹、不同名称的文件）&amp;hellip;&lt;/p&gt;
+&lt;p&gt;　　然后为了图读写方便，我们还要将文本中的每行都固定一个格式，跟咱们选的编程语言能相互搭配，快速转换成这个语言支持的变量&amp;hellip;&lt;/p&gt;
 &lt;p&gt;　　你又感觉存硬盘里面读取太慢了，改成选择性保存到内存&amp;hellip; 升级索引方式&amp;hellip; 优化查找逻辑&amp;hellip;&lt;/p&gt;
-&lt;p&gt;　　之后改改这改改那&amp;hellip; 最后你就设计出来一个数据库
-　　&lt;/p&gt;
+&lt;p&gt;　　之后改改这改改那&amp;hellip; 最后你就设计出来一个数据库&lt;/p&gt;
 &lt;h3 id="如何界定快慢"&gt;如何界定快慢&lt;/h3&gt;
-&lt;p&gt;　　暂且认为快慢只取决于操作复杂度和传输大小。
-　　&lt;/p&gt;
+&lt;p&gt;　　暂且认为快慢只取决于操作复杂度和传输大小。&lt;/p&gt;
 &lt;h3 id="数据库能干啥"&gt;数据库能干啥&lt;/h3&gt;
 &lt;p&gt;　　现在已经有的成熟的数据库类型有很多种，能存储的数据也多种多样，包括表单、对象、纯文本、向量、图片&amp;hellip;&lt;/p&gt;
 &lt;p&gt;　　其实有这样一种说法&amp;ndash;“语言是逻辑的边界”，也就是说其实只要能存有序的二进制、或者文本，其实就能存一切&amp;hellip;（如果你不理解，先想想密码学为什么存在）&lt;/p&gt;

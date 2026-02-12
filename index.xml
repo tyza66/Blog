@@ -24,10 +24,13 @@
 　　
 　　可以通过可视化软件快速理表、字段、查询&amp;hellip;&lt;/p&gt;
 &lt;p&gt;　　以SQL 的逻辑为例，基础操作可以理解为“【操作】（为操作目标服务的修饰）”，例如：&lt;/p&gt;
-&lt;p&gt;　　- insert into `user`(name, email, age) values (&amp;lsquo;sdm&amp;rsquo;, &amp;lsquo;&lt;a href="mailto:shun_@outlook.com"&gt;shun_@outlook.com&lt;/a&gt;&amp;rsquo;, 26) [修饰]; 是“【操作】（【目标】【来源】【修饰】）”
-　　- select * from `user` where id &amp;lt; 10; 也是 “【操作】（【目标】【来源】【修饰】）”
-　　- update `user` set age = 30 where name = &amp;lsquo;Alice&amp;rsquo;; 是“【操作】（【目标】【修饰】）“
-　　- delete from `user` where id = 5; 也是“【操作】（【目标】【修饰】）“&lt;/p&gt;</description></item><item><title>[技术分享][005期]分享一些逻辑 2026</title><link>https://www.tyza66.top/technology_sharing/t005/</link><pubDate>Fri, 06 Feb 2026 19:36:04 +0800</pubDate><guid>https://www.tyza66.top/technology_sharing/t005/</guid><description>&lt;h3 id="一人类具有相同或相似的大脑别人能想到理解你也能想到"&gt;一、人类具有相同或相似的大脑，别人能想到（理解）你也能想到&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;insert into `user`(name, email, age) values (&amp;lsquo;sdm&amp;rsquo;, &amp;lsquo;&lt;a href="mailto:shun_@outlook.com"&gt;shun_@outlook.com&lt;/a&gt;&amp;rsquo;, 26) [修饰]; 是“【操作】（【目标】【来源】【修饰】）”&lt;/li&gt;
+&lt;li&gt;select * from `user` where id &amp;lt; 10; 也是 “【操作】（【目标】【来源】【修饰】）”&lt;/li&gt;
+&lt;li&gt;update `user` set age = 30 where name = &amp;lsquo;Alice&amp;rsquo;; 是“【操作】（【目标】【修饰】）“&lt;/li&gt;
+&lt;li&gt;delete from `user` where id = 5; 也是“【操作】（【目标】【修饰】）“&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;　　整体感受上其实可以跟我们正常对语言理解中的“语言的逻辑”（主谓宾、定状补）非常相似。不过 SQL 是可以嵌套的这点有点不一样，无伤大雅。&lt;/p&gt;</description></item><item><title>[技术分享][005期]分享一些逻辑 2026</title><link>https://www.tyza66.top/technology_sharing/t005/</link><pubDate>Fri, 06 Feb 2026 19:36:04 +0800</pubDate><guid>https://www.tyza66.top/technology_sharing/t005/</guid><description>&lt;h3 id="一人类具有相同或相似的大脑别人能想到理解你也能想到"&gt;一、人类具有相同或相似的大脑，别人能想到（理解）你也能想到&lt;/h3&gt;
 &lt;p&gt;　　这个观点来自知名UP主“底层原理/底层原理1988”的一期视频，我在考研那段时间我觉得是最宝贵的一个收获。&lt;/p&gt;
 &lt;p&gt;　　这个思维在开发领域也是一个有力的神器。
 　　

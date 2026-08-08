@@ -5,6 +5,7 @@ theme = 'PaperMod'
 
 [params]
   author = 'tyza66'
+  comments = true
 
 [params.assets]
   favicon = "/favicon.ico"
